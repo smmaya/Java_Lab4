@@ -43,7 +43,7 @@ public class Main {
         Student student2 = new Student(1938, "Bartek", "Bartecki", 35, "Facet");
         System.out.println(student1);
         System.out.println(student2);
-        System.out.println("");
+        System.out.println("---");
         Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", 33, "Babeczka");
         Pracownik pracownik2 = new Pracownik(22, "Daria", "Daruńska", 45, "Babeczka");
         System.out.println(pracownik1);
