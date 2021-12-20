@@ -38,5 +38,19 @@ public class Main {
         Stworzyć klasę która będzie implementować 2 lub 3 interfejsy następnie będzie
         dziedziczona przez inną klasę
         */
+
+        Student student1 = new Student(1029, "Adam", "Adamski", 25, "Facet");
+        Student student2 = new Student(1938, "Bartek", "Bartecki", 35, "Facet");
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println("Indeks: " + student1.getIndeks() + " > " + student1.getImie()+ " " +
+                student1.getNazwisko() + ", " + student1.getWiek() + ", " + student1.getSeks());
+        System.out.println("");
+        Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", 33, "Kobieta");
+        Pracownik pracownik2 = new Pracownik(22, "Daria", "Darmocha", 45, "Kobieta");
+        System.out.println(pracownik1);
+        System.out.println(pracownik2);
+        System.out.println("Numer przepustki: " + pracownik2.getBadge() + " > " + pracownik2.getImie()+ " " +
+                pracownik2.getNazwisko() + ", " + pracownik2.getWiek() + ", " + pracownik2.getSeks());
     }
 }
