@@ -44,8 +44,8 @@ public class Main {
         System.out.println(student1);
         System.out.println(student2);
         System.out.println("");
-        Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", 33, "Kobieta");
-        Pracownik pracownik2 = new Pracownik(22, "Daria", "Darmocha", 45, "Kobieta");
+        Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", 33, "Babeczka");
+        Pracownik pracownik2 = new Pracownik(22, "Daria", "Daruńska", 45, "Babeczka");
         System.out.println(pracownik1);
         System.out.println(pracownik2);
     }
