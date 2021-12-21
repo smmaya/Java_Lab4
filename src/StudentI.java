@@ -1,6 +1,6 @@
 
 public interface StudentI extends CzlowiekI {
-    int indeks(int _indeks);
-    String imie(String _imie);
-    String nazwisko(String _nazwisko);
+    int indeks(int indeks);
+    String imie(String imie);
+    String nazwisko(String nazwisko);
 }

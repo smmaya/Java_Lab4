@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,12 +43,32 @@ public class Main {
 
         Student student1 = new Student(1029, "Adam", "Adamski", 25, "Facet");
         Student student2 = new Student(1938, "Bartek", "Bartecki", 35, "Facet");
+        System.out.println("> Wypisujemy studentów:");
         System.out.println(student1);
         System.out.println(student2);
-        System.out.println("---");
+        System.out.println("");
         Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", 33, "Babeczka");
         Pracownik pracownik2 = new Pracownik(22, "Daria", "Daruńska", 45, "Babeczka");
+        System.out.println("> Wypisujemy pracowników:");
         System.out.println(pracownik1);
         System.out.println(pracownik2);
+        System.out.println("");
+        Kierownik kierownik1 = new Kierownik("IT", "Katarzyna", "Kasińska");
+        Kierownik kierownik2 = new Kierownik("IS", "Szymon", "Szymański");
+        List<PracownikI> listaPracownikow = new ArrayList<>();
+        listaPracownikow.add(pracownik1);
+        listaPracownikow.add(pracownik2);
+        listaPracownikow.add(kierownik1);
+        listaPracownikow.add(kierownik2);
+        System.out.println("> Wypisujemy pętlą pracowników i kierowników:");
+        for (PracownikI pracownicy : listaPracownikow) {
+            System.out.println(pracownicy);
+        }
+        AniolyOrazDemony angel = new AniolyOrazDemony("Archanioł", "Ratownik Dusz");
+        AniolyOrazDemony diabel = new AniolyOrazDemony("Śmierć", "Żniwiarz Dusz");
+        System.out.println("");
+        System.out.println("> Wypisujemy anioły i demony:");
+        System.out.println(angel);
+        System.out.println(diabel);
     }
 }

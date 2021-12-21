@@ -1,5 +1,5 @@
 
 public interface CzlowiekI {
-     int wiek(int _wiek);
-     String seks(String _seks);
+     int wiek(int wiek);
+     String seks(String seks);
 }

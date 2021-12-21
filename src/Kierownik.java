@@ -1,27 +1,24 @@
 
-public class Pracownik implements PracownikI{
-    private int badge;
+public class Kierownik implements PracownikI{
+
+    private String dzial;
     private String imie;
     private String nazwisko;
-    private int wiek;
-    private String seks;
 
-    public Pracownik(int badge, String imie, String nazwisko, int wiek, String seks) {
-        this.badge = badge;
+    public Kierownik(String dzial, String imie, String nazwisko) {
+        this.dzial = dzial;
         this.imie = imie;
         this.nazwisko = nazwisko;
-        this.wiek = wiek;
-        this.seks = seks;
-    }
-
-    @Override
-    public String seks(String seks) {
-        return seks;
     }
 
     @Override
     public int wiek(int wiek) {
-        return wiek;
+        return 0;
+    }
+
+    @Override
+    public String seks(String seks) {
+        return null;
     }
 
     @Override
@@ -39,12 +36,12 @@ public class Pracownik implements PracownikI{
         return null;
     }
 
-    public int getBadge() {
-        return badge;
+    public String getDzial() {
+        return dzial;
     }
 
-    public void setBadge(int badge) {
-        this.badge = badge;
+    public void setDzial(String dzial) {
+        this.dzial = dzial;
     }
 
     public String getImie() {
@@ -63,16 +60,8 @@ public class Pracownik implements PracownikI{
         this.nazwisko = nazwisko;
     }
 
-    public int getWiek() {
-        return wiek;
-    }
-
-    public String getSeks() {
-        return seks;
-    }
-
     @Override
     public String toString() {
-        return "Pracownik: " + badge + ", " + imie + " " + nazwisko + ", wiek: " + wiek + ", " + seks;
+        return "Kierownik: " + dzial + ", " + imie + " " + nazwisko;
     }
 }

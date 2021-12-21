@@ -15,28 +15,28 @@ public class Student implements StudentI{
     }
 
     @Override
-    public String seks(String _seks) {
-        return _seks;
+    public String seks(String seks) {
+        return seks;
     }
 
     @Override
-    public int wiek(int _wiek) {
-        return _wiek;
+    public int wiek(int wiek) {
+        return wiek;
     }
 
     @Override
-    public int indeks(int _indeks) {
-        return _indeks;
+    public int indeks(int indeks) {
+        return indeks;
     }
 
     @Override
-    public String imie(String _imie) {
-        return _imie;
+    public String imie(String imie) {
+        return imie;
     }
 
     @Override
-    public String nazwisko(String _nazwisko) {
-        return _nazwisko;
+    public String nazwisko(String nazwisko) {
+        return nazwisko;
     }
 
     public int getIndeks() {
