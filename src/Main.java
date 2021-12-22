@@ -1,5 +1,4 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -7,20 +6,27 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj liczbę?");
-        try {
-            int[] tablica = {1, 2, 3, 4, 5, 6};
-            int element = scanner.nextInt();
-            int index = -1;
-            for (int i = 0; i < tablica.length; i++) {
-                if (tablica[i] == element) {
-                    index = i;
-                    break;
-                }
+        int[] tab = {1, 2, 3, 4, 5, 6};
+        int element = scanner.nextInt();
+            int indexNum = getArrayIndex(tab, element);
+            if (indexNum == 0) {
+                System.out.println("Poza tablicą!");
+            } else {
+                System.out.print(element + " jest pod indexem: " + indexNum);
             }
-            System.out.println("Indeks liczby " + element + " to : " + index);
-        } catch (InputMismatchException e) {
-            System.out.println("Wpisz liczbę a nie literę!");
+    }
+
+    public static int getArrayIndex(int[] tab, int element) {
+        int k = 0;
+
+        for (int i = 0; i < tab.length; i++) {
+
+            if (tab[i] == element) {
+                k = i;
+                break;
+            }
         }
+        return k;
     }
 }
         /* zad.1
