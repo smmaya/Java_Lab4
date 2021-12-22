@@ -6,7 +6,6 @@ public class Dom implements BudynekI {
     private KolorEnum kolor;
     private int rokBudowy;
     private int obecnyRok;
-    private int wiek;
 
     public Dom(double pow, String adres, int ileOkien, int iluMieszkancow, KolorEnum kolor, int rokBudowy, int obecnyRok) {
         this.pow = pow;
@@ -19,16 +18,6 @@ public class Dom implements BudynekI {
     }
 
     public Dom() {
-    }
-
-    @Override
-    public String toString() {
-        return "Dom: {" + "adres: " + adres +
-                "rok budowy= " + rokBudowy +
-                ", wiek budynku= " + (obecnyRok - rokBudowy) +
-                ", liczba mieszkańców= " + iluMieszkancow +
-                ", ilość okien= " + ileOkien + " kolor domu: " + kolor +
-                '}';
     }
 
     @Override
@@ -122,4 +111,25 @@ public class Dom implements BudynekI {
         this.obecnyRok = obecnyRok;
     }
 
+    @Override
+    public String toString() {
+        return "\nBudynek o powierzchni całkowitej: " + pow + " m2\n" +
+                "Lokalizacja: " + adres + "\n" +
+                "Liczba mieszkańców: " + iluMieszkancow + "\n" +
+                "Ilość okien: " + ileOkien + "\n" +
+                "Kolor fasady: " + kolor + "\n" +
+                "Rok budowy: " + rokBudowy +
+                " -> wiek budynku: " + (obecnyRok - rokBudowy) + formattedText();
+    }
+
+    public String formattedText() {
+        if (obecnyRok - rokBudowy == 0) {
+            return " budynek jeszcze nie powstał!";
+        } else if (obecnyRok - rokBudowy == 1) {
+            return " rok.";
+        } else if (obecnyRok - rokBudowy == 2 || obecnyRok - rokBudowy == 3 || obecnyRok - rokBudowy == 4) {
+            return " lata.";
+        }
+        return " lat.";
+    }
 }

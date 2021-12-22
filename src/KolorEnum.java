@@ -1,2 +1,2 @@
 
-public enum KolorEnum {Czarny, Czerwony, Zielony, Niebieski}
+public enum KolorEnum {Czerwony, Zielony, Szary}
