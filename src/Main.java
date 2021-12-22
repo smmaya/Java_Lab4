@@ -3,28 +3,25 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj liczbę?");
-        int[] tab = {1, 2, 3, 4, 5, 6};
-        int element = scanner.nextInt();
-            int indexNum = getArrayIndex(tab, element);
-            if (indexNum == -1) {
-                System.out.println("Poza tablicą!");
-            } else {
-                System.out.print(element + " jest pod indexem: " + indexNum);
-            }
-    }
-
-    public static int getArrayIndex(int[] tab, int element) {
-        int k = -1;
-        for (int i = 0; i < tab.length; i++) {
-            if (tab[i] == element) {
-                k = i;
-                break;
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Podaj liczbę od 0 do 5?");
+            int[] tab = {1, 2, 3, 4, 5, 6};
+            try {
+                int element = scanner.nextInt();
+                try {
+                    Integer number = tab[element];
+                    System.out.println("Wartość tego indeksu to: " + number);
+                    return;
+                } catch (IndexOutOfBoundsException e) {
+                    System.out.println("Index nie mieści się w przedziale!");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Podaj liczbę a nie literę!");
             }
         }
-        return k;
+
+
     }
 }
         /* zad.1
@@ -46,7 +43,7 @@ public class Main {
         */
 
         /* zad.2
-        a) stworzyć dowolny przykład z NullPonterException,
+        a) stworzyć dowolny przykład z NullPointerException,
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
