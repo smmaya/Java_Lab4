@@ -13,6 +13,6 @@ public class AniolyOrazDemony extends Stworzenie{
 
     @Override
     public String toString() {
-        return "Stworzenie: " + imie + " - " + typ + ", " + ksywa;
+        return "Stworzenie: " + imie + " | " + typ + ", " + ksywa;
     }
 }
