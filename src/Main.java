@@ -4,7 +4,39 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        /* zad.1
+        Student student1 = new Student(1029, "Adam", "Adamski", "IT", "Programowanie");
+        Student student2 = new Student(1938, "Bartek", "Bartecki", "IS", "Sieci");
+        System.out.println("> Wypisujemy studentów:");
+        System.out.println(student1);
+        System.out.println(student2);
+        Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", "UoP", 29.90);
+        Pracownik pracownik2 = new Pracownik(22, "Daria", "Daruńska", "B2B", 17.50);
+        Pracownik pracownik3 = new Pracownik(33, "Wojciech", "Wojciński", "B2B", 22.90);
+        Pracownik pracownik4 = new Pracownik(44, "Gabriela", "Gabarska", "Zlecenie", 30);
+        System.out.println("\n> Wypisujemy pracowników:");
+        System.out.println(pracownik1);
+        System.out.println(pracownik2);
+        System.out.println(pracownik3);
+        System.out.println(pracownik4);
+        Kierownik kierownik1 = new Kierownik(pracownik1);
+        Kierownik kierownik2 = new Kierownik(student2);
+        List<PracownikI> listaPracownikow = new ArrayList<>();
+        listaPracownikow.add(pracownik2);
+        listaPracownikow.add(pracownik3);
+        listaPracownikow.add(pracownik4);
+        listaPracownikow.add(kierownik1);
+        listaPracownikow.add(kierownik2);
+        System.out.println("\n> Wypisujemy pętlą pracowników i kierowników:");
+        for (PracownikI pracownicy : listaPracownikow) {
+            System.out.println(pracownicy);
+        }
+        AniolyOrazDemony aniol = new AniolyOrazDemony("Gabriel","Archanioł", "Ratownik Dusz");
+        AniolyOrazDemony diabel = new AniolyOrazDemony("Belzebub", "Diabeł", "Żniwiarz Dusz");
+        System.out.println("\n> Wypisujemy anioły i demony:");
+        System.out.println(aniol);
+        System.out.println(diabel);
+    }
+            /* zad.1
         a) napisać interfejs CzlowiekI
         b) zadeklarować 2 metody
 
@@ -40,37 +72,4 @@ public class Main {
         Stworzyć klasę która będzie implementować 2 lub 3 interfejsy następnie będzie
         dziedziczona przez inną klasę
         */
-
-        Student student1 = new Student(1029, "Adam", "Adamski", "IT", "Programowanie");
-        Student student2 = new Student(1938, "Bartek", "Bartecki", "IS", "Sieci");
-        System.out.println("> Wypisujemy studentów:");
-        System.out.println(student1);
-        System.out.println(student2);
-        Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", "UoP", 29.90);
-        Pracownik pracownik2 = new Pracownik(22, "Daria", "Daruńska", "B2B", 17.50);
-        Pracownik pracownik3 = new Pracownik(33, "Wojciech", "Wojciński", "B2B", 22.90);
-        Pracownik pracownik4 = new Pracownik(44, "Gabriela", "Gabarska", "Zlecenie", 30);
-        System.out.println("\n> Wypisujemy pracowników:");
-        System.out.println(pracownik1);
-        System.out.println(pracownik2);
-        System.out.println(pracownik3);
-        System.out.println(pracownik4);
-        Kierownik kierownik1 = new Kierownik(pracownik1);
-        Kierownik kierownik2 = new Kierownik(student2);
-        List<PracownikI> listaPracownikow = new ArrayList<>();
-        listaPracownikow.add(pracownik2);
-        listaPracownikow.add(pracownik3);
-        listaPracownikow.add(pracownik4);
-        listaPracownikow.add(kierownik1);
-        listaPracownikow.add(kierownik2);
-        System.out.println("\n> Wypisujemy pętlą pracowników i kierowników:");
-        for (PracownikI pracownicy : listaPracownikow) {
-            System.out.println(pracownicy);
-        }
-        AniolyOrazDemony aniol = new AniolyOrazDemony("Gabriel","Archanioł", "Ratownik Dusz");
-        AniolyOrazDemony diabel = new AniolyOrazDemony("Belzebub", "Diabeł", "Żniwiarz Dusz");
-        System.out.println("\n> Wypisujemy anioły i demony:");
-        System.out.println(aniol);
-        System.out.println(diabel);
-    }
 }
