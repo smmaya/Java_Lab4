@@ -1,6 +1,4 @@
-import java.time.LocalDate;
-
-public class Dom implements Budynek {
+public class Dom implements BudynekI {
     private double pow;
     private String adres;
     private int ileOkien;

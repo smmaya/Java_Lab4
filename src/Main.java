@@ -14,7 +14,7 @@ public class Main {
         System.out.println(domek);
         System.out.println("");
 
-        Budynek budynek = new Dom();
+        BudynekI budynek = new Dom();
         ((Dom) budynek).setObecnyRok(LocalDate.now().getYear());
         ((Dom) budynek).setRokBudowy(1921);
         ((Dom) budynek).setKolor(KolorEnum.Zielony);

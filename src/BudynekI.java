@@ -1,4 +1,4 @@
-public interface Budynek {
+public interface BudynekI {
 //    double powierzchnia(double pow);
 //    String adresBudynku(String adres);
 //    void liczbaOkien(int liczbaOkien);
