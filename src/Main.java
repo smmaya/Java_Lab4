@@ -18,7 +18,9 @@ public class Main {
         System.out.println(pracownik2);
         System.out.println(pracownik3);
         System.out.println(pracownik4);
+        // Definiuję nowego kierownika jako pracownik1
         Kierownik kierownik1 = new Kierownik(pracownik1);
+        // Definiuję nowego kierownika jako student2
         Kierownik kierownik2 = new Kierownik(student2);
         List<PracownikI> listaPracownikow = new ArrayList<>();
         listaPracownikow.add(pracownik2);
