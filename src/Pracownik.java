@@ -3,76 +3,50 @@ public class Pracownik implements PracownikI{
     private int badge;
     private String imie;
     private String nazwisko;
-    private int wiek;
-    private String seks;
+    private String typUmowy;
+    private double stawkaGodzinowa;
 
-    public Pracownik(int badge, String imie, String nazwisko, int wiek, String seks) {
+    public Pracownik(int badge, String imie, String nazwisko, String typUmowy, double stawkaGodzinowa) {
         this.badge = badge;
         this.imie = imie;
         this.nazwisko = nazwisko;
-        this.wiek = wiek;
-        this.seks = seks;
-    }
-
-    @Override
-    public String seks(String seks) {
-        return seks;
-    }
-
-    @Override
-    public int wiek(int wiek) {
-        return wiek;
-    }
-
-    @Override
-    public int badge(int badge) {
-        return 0;
+        this.typUmowy = typUmowy;
+        this.stawkaGodzinowa = stawkaGodzinowa;
     }
 
     @Override
     public String imie(String imie) {
-        return null;
+        this.imie = imie;
+        return imie;
     }
 
     @Override
     public String nazwisko(String nazwisko) {
-        return null;
-    }
-
-    public int getBadge() {
-        return badge;
-    }
-
-    public void setBadge(int badge) {
-        this.badge = badge;
-    }
-
-    public String getImie() {
-        return imie;
-    }
-
-    public void setImie(String imie) {
-        this.imie = imie;
-    }
-
-    public String getNazwisko() {
+        this.nazwisko = nazwisko;
         return nazwisko;
     }
 
-    public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
+    @Override
+    public int badge(int badge) {
+        this.badge = badge;
+        return badge;
     }
 
-    public int getWiek() {
-        return wiek;
+    @Override
+    public String typUmowy(String typUmowy) {
+        this.typUmowy = typUmowy;
+        return typUmowy;
     }
 
-    public String getSeks() {
-        return seks;
+    @Override
+    public double stawkaGodzinowa(double stawkaGodzinowa) {
+        this.stawkaGodzinowa = stawkaGodzinowa;
+        return stawkaGodzinowa;
     }
 
     @Override
     public String toString() {
-        return "Pracownik: " + badge + ", " + imie + " " + nazwisko + ", wiek: " + wiek + ", " + seks;
+        return "Pracownik: " + badge + ", " + imie + " " + nazwisko +
+                ", typ umowy: " + typUmowy + ", stawka godzinowa: " + stawkaGodzinowa;
     }
 }

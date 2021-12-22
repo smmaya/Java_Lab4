@@ -1,67 +1,42 @@
 
 public class Kierownik implements PracownikI{
 
-    private String dzial;
-    private String imie;
-    private String nazwisko;
+    private Object pracownik;
+    private int badge;
+    private String typUmowy;
+    private double stawkaGodzinowa;
 
-    public Kierownik(String dzial, String imie, String nazwisko) {
-        this.dzial = dzial;
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-    }
-
-    @Override
-    public int wiek(int wiek) {
-        return 0;
-    }
-
-    @Override
-    public String seks(String seks) {
-        return null;
-    }
-
-    @Override
-    public int badge(int badge) {
-        return 0;
+    public Kierownik(Object pracownik) {
+        this.pracownik = pracownik;
     }
 
     @Override
     public String imie(String imie) {
-        return null;
+        return imie;
     }
 
     @Override
     public String nazwisko(String nazwisko) {
-        return null;
-    }
-
-    public String getDzial() {
-        return dzial;
-    }
-
-    public void setDzial(String dzial) {
-        this.dzial = dzial;
-    }
-
-    public String getImie() {
-        return imie;
-    }
-
-    public void setImie(String imie) {
-        this.imie = imie;
-    }
-
-    public String getNazwisko() {
         return nazwisko;
     }
 
-    public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
+    @Override
+    public int badge(int badge) {
+        return badge;
+    }
+
+    @Override
+    public String typUmowy(String typUmowy) {
+        return typUmowy;
+    }
+
+    @Override
+    public double stawkaGodzinowa(double stawkaGodzinowa) {
+        return stawkaGodzinowa;
     }
 
     @Override
     public String toString() {
-        return "Kierownik: " + dzial + ", " + imie + " " + nazwisko;
+        return "Kierownik: " + pracownik;
     }
 }

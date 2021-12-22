@@ -41,34 +41,36 @@ public class Main {
         dziedziczona przez inną klasę
         */
 
-        Student student1 = new Student(1029, "Adam", "Adamski", 25, "Facet");
-        Student student2 = new Student(1938, "Bartek", "Bartecki", 35, "Facet");
+        Student student1 = new Student(1029, "Adam", "Adamski", "IT", "Programowanie");
+        Student student2 = new Student(1938, "Bartek", "Bartecki", "IS", "Sieci");
         System.out.println("> Wypisujemy studentów:");
         System.out.println(student1);
         System.out.println(student2);
-        System.out.println("");
-        Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", 33, "Babeczka");
-        Pracownik pracownik2 = new Pracownik(22, "Daria", "Daruńska", 45, "Babeczka");
-        System.out.println("> Wypisujemy pracowników:");
+        Pracownik pracownik1 = new Pracownik(11, "Celina", "Celińska", "UoP", 29.90);
+        Pracownik pracownik2 = new Pracownik(22, "Daria", "Daruńska", "B2B", 17.50);
+        Pracownik pracownik3 = new Pracownik(33, "Wojciech", "Wojciński", "B2B", 22.90);
+        Pracownik pracownik4 = new Pracownik(44, "Gabriela", "Gabarska", "Zlecenie", 30);
+        System.out.println("\n> Wypisujemy pracowników:");
         System.out.println(pracownik1);
         System.out.println(pracownik2);
-        System.out.println("");
-        Kierownik kierownik1 = new Kierownik("IT", "Katarzyna", "Kasińska");
-        Kierownik kierownik2 = new Kierownik("IS", "Szymon", "Szymański");
+        System.out.println(pracownik3);
+        System.out.println(pracownik4);
+        Kierownik kierownik1 = new Kierownik(pracownik1);
+        Kierownik kierownik2 = new Kierownik(student2);
         List<PracownikI> listaPracownikow = new ArrayList<>();
-        listaPracownikow.add(pracownik1);
         listaPracownikow.add(pracownik2);
+        listaPracownikow.add(pracownik3);
+        listaPracownikow.add(pracownik4);
         listaPracownikow.add(kierownik1);
         listaPracownikow.add(kierownik2);
-        System.out.println("> Wypisujemy pętlą pracowników i kierowników:");
+        System.out.println("\n> Wypisujemy pętlą pracowników i kierowników:");
         for (PracownikI pracownicy : listaPracownikow) {
             System.out.println(pracownicy);
         }
-        AniolyOrazDemony angel = new AniolyOrazDemony("Archanioł", "Ratownik Dusz");
-        AniolyOrazDemony diabel = new AniolyOrazDemony("Śmierć", "Żniwiarz Dusz");
-        System.out.println("");
-        System.out.println("> Wypisujemy anioły i demony:");
-        System.out.println(angel);
+        AniolyOrazDemony aniol = new AniolyOrazDemony("Gabriel","Archanioł", "Ratownik Dusz");
+        AniolyOrazDemony diabel = new AniolyOrazDemony("Belzebub", "Diabeł", "Żniwiarz Dusz");
+        System.out.println("\n> Wypisujemy anioły i demony:");
+        System.out.println(aniol);
         System.out.println(diabel);
     }
 }
