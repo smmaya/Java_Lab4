@@ -9,7 +9,7 @@ public class Main {
         int[] tab = {1, 2, 3, 4, 5, 6};
         int element = scanner.nextInt();
             int indexNum = getArrayIndex(tab, element);
-            if (indexNum == 0) {
+            if (indexNum == -1) {
                 System.out.println("Poza tablicą!");
             } else {
                 System.out.print(element + " jest pod indexem: " + indexNum);
@@ -17,7 +17,7 @@ public class Main {
     }
 
     public static int getArrayIndex(int[] tab, int element) {
-        int k = 0;
+        int k = -1;
         for (int i = 0; i < tab.length; i++) {
             if (tab[i] == element) {
                 k = i;
