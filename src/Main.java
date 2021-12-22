@@ -5,17 +5,21 @@ public class Main {
         Dom domek = new Dom();
         domek.setObecnyRok(LocalDate.now().getYear());
         domek.setRokBudowy(1973);
-        System.out.println("Wiek budynku: " + domek.wiekDomu(LocalDate.now().getYear(), domek.getRokBudowy()));
+        domek.setKolor(KolorEnum.Czerwony);
+        domek.setAdres("ul. Gdańska 50, 80-888");
+        System.out.println("Wiek budynku: " + domek.wiekDomu(domek.getObecnyRok(), domek.getRokBudowy()));
         domek.liczbaMieszkancow(1200);
         domek.liczbaOkien(125);
+        System.out.println("Kolor domu: " + domek.getKolor());
         System.out.println(domek);
         System.out.println("");
 
         Budynek budynek = new Dom();
-        budynek.setObecnyRok(LocalDate.now().getYear());
-        budynek.setRokBudowy(1921);
+        ((Dom) budynek).setObecnyRok(LocalDate.now().getYear());
+        ((Dom) budynek).setRokBudowy(1921);
+        ((Dom) budynek).setKolor(KolorEnum.Zielony);
         System.out.println("Powierzchnia: " + budynek.powierzchnia(250.76) + " m2");
-        System.out.println("Kolor domu: " + budynek.kolorDomu(KolorEnum.Czerwony));
+        System.out.println("Kolor domu: " + ((Dom) budynek).getKolor());
         System.out.println("Adres: " + budynek.adresBudynku("ul. Jagiellońska 10, 80-333 Gdańsk"));
         budynek.liczbaMieszkancow(300);
         budynek.liczbaOkien(99);
