@@ -6,7 +6,7 @@ public class Main {
         double poleKwadratu = kwadrat.pole();
         double obwodKwadratu = kwadrat.obwod();
         String figuraKwadrat = kwadrat.getClass().getCanonicalName();
-        System.out.println("\n" + kwadrat.nazwaFigury(figuraKwadrat) +
+        System.out.println(kwadrat.nazwaFigury(figuraKwadrat) +
                 " o polu: " + poleKwadratu + " i obwodzie: " + obwodKwadratu);
 
         Prostokat prostokat = new Prostokat(3, 4);
