@@ -18,9 +18,7 @@ public class Main {
 
     public static int getArrayIndex(int[] tab, int element) {
         int k = 0;
-
         for (int i = 0; i < tab.length; i++) {
-
             if (tab[i] == element) {
                 k = i;
                 break;
