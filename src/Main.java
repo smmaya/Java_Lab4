@@ -1,8 +1,28 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbę?");
+        try {
+            int[] tablica = {1, 2, 3, 4, 5, 6};
+            int element = scanner.nextInt();
+            int index = -1;
+            for (int i = 0; i < tablica.length; i++) {
+                if (tablica[i] == element) {
+                    index = i;
+                    break;
+                }
+            }
+            System.out.println("Indeks liczby " + element + " to : " + index);
+        } catch (InputMismatchException e) {
+            System.out.println("Wpisz liczbę a nie literę!");
+        }
+    }
+}
         /* zad.1
         a) stworzyć tablicę 6-cio elementową, uzupełnić przykładowymi wartościami (dowolny typ tablicy),
         b) wprowadzić z klawiatury numer indexu tablicy który chcemy wyświetlić, użyć metody next() --> scan.next();
@@ -21,13 +41,8 @@ public class Main {
            white(!isIndexCorrect) {}
         */
 
-
-
         /* zad.2
         a) stworzyć dowolny przykład z NullPonterException,
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
-
-    }
-}
