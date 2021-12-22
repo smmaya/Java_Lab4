@@ -4,8 +4,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Student student1 = new Student(1029, "Adam", "Adamski", "IT", "Programowanie");
-        Student student2 = new Student(1938, "Bartek", "Bartecki", "IS", "Sieci");
+        Student student1 = new Student(1, "Adam", "Adamski", "IT", "Programowanie");
+        Student student2 = new Student(2, "Bartek", "Bartecki", "IS", "Sieci");
         System.out.println("> Wypisujemy studentów:");
         System.out.println(student1);
         System.out.println(student2);
