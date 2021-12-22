@@ -10,7 +10,7 @@ public class Main {
             try {
                 int element = scanner.nextInt();
                 try {
-                    Integer number = tab[element];
+                    int number = tab[element];
                     System.out.println("Wartość tego indeksu to: " + number);
                     return;
                 } catch (IndexOutOfBoundsException e) {
