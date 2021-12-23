@@ -24,23 +24,26 @@ public class Zad2 {
             System.out.println("Division " + e.getMessage() + ".");
         }
 
-        int element;
+
         Scanner scanner = new Scanner(System.in);
         int[] tab = {2, 4, 6, 8, 10, 12};
         System.out.println("Tablica: " + Arrays.toString(tab));
         System.out.println("Wpisz numer indexu aby wyświetlic jego wartość: ");
-            try {
+        try {
+            int element;
+            while (true) {
+                /* dopóki sprawdzasz poprawne indeksy jedziesz dalej,
+                po wywołaniu któregoś z wyjątków, program kończy pracę */
                 element = Integer.parseInt(scanner.next());
                 System.out.println("Ten indeks ma wartość: " + tab[element]);
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Indeks nie należy do tablicy!");
-            } catch (NumberFormatException e) {
-                System.out.println("Wpisz liczbę a nie literę!");
-            } catch (NullPointerException e) {
-                System.out.println("Coś poszło nie tak...");
-            } finally {
-                System.out.println("Do zobaczenia.");
             }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Indeks nie należy do tablicy!");
+        } catch (NumberFormatException e) {
+            System.out.println("Wpisałeś/aś coś, co nie jest liczbą całkowitą!");
+        } finally {
+            System.out.println("Do zobaczenia.");
+        }
 
     }
 }
