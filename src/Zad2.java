@@ -24,7 +24,6 @@ public class Zad2 {
             System.out.println("Division " + e.getMessage() + ".");
         }
 
-
         Scanner scanner = new Scanner(System.in);
         int[] tab = {2, 4, 6, 8, 10, 12};
         System.out.println("Tablica: " + Arrays.toString(tab));
